@@ -17,7 +17,10 @@ jobs:
           echo $?
           pwd
           ls $(pwd) -al
-          echo "---"
-          ls -al /github/workspace
+          # echo "---"
+          # ls -al /github/workspace
       - name: Run ansible-lint
         uses: ansible-community/ansible-lint-action@main
+        with:
+          path: "${{ github.workspace }}"
+
