@@ -11,6 +11,7 @@ jobs:
           fetch-depth: 2
       - name: Run ansible-lint
         run: |
+          pip install ansible-lint
           ansible-lint .
         env:
           GITHUB_ACTIONS: "true"
