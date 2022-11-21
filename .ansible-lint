@@ -1,14 +1,1 @@
 progressive: true
-skip_list:
-  - command-instead-of-module
-  - no-changed-when
-  - deprecated-local-action
-  - risky-shell-pipe
-  - yaml
-  - schema
-  - name
-  - template-instead-of-copy
-warn_list:
-  - experimental
-kinds:
-  - playbook: "**/*.yml"
