@@ -9,9 +9,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
-      - name: Run ansible-lint
+      - name: Install dependencies
         run: |
           pip install ansible-lint
+      - name: Run ansible-lint
+        run: |
           ansible-lint .
         env:
           GITHUB_ACTIONS: "true"
