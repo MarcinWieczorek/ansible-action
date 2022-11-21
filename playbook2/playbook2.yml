@@ -6,5 +6,5 @@
       ansible.builtin.user:
         create_home: true
         generate_ssh_key: false
-        name: foobar1
+        name: foobar2
         shell: /bin/bash
