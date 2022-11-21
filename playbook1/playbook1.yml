@@ -1,0 +1,10 @@
+- hosts: dummy
+  gather_facts: false
+  vars:
+  tasks:
+    - name: Create user account
+      user:
+        create_home: yes
+        generate_ssh_key: no
+        name: foobar
+        shell: /bin/bash
