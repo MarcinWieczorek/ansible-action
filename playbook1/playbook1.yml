@@ -26,3 +26,9 @@
         generate_ssh_key: false
         name: foobar
         shell: /bin/bash
+    - name: Create user account
+      user:
+        create_home: true
+        generate_ssh_key: false
+        name: foobar
+        shell: /bin/bash
