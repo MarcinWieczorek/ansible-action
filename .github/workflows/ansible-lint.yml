@@ -15,5 +15,6 @@ jobs:
           echo "----"
           git rev-parse HEAD^1
           echo $?
+          pwd
       - name: Run ansible-lint
         uses: ansible-community/ansible-lint-action@main
