@@ -3,7 +3,7 @@
   vars:
   tasks:
     - name: Create user account
-      ansible.builtin.user:
+      user:
         create_home: true
         generate_ssh_key: false
         name: foobar
