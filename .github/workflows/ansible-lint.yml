@@ -16,5 +16,8 @@ jobs:
           git rev-parse HEAD^1
           echo $?
           pwd
+          ls $(pwd) -al
+          echo "---"
+          ls -al /github/workspace
       - name: Run ansible-lint
         uses: ansible-community/ansible-lint-action@main
