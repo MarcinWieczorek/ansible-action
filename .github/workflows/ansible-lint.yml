@@ -7,5 +7,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        fetch-depth: 2
       - name: Run ansible-lint
         uses: ansible-community/ansible-lint-action@main
