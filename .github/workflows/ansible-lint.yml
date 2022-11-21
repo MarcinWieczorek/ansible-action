@@ -14,5 +14,6 @@ jobs:
           git log --oneline | head -n100
           echo "----"
           git rev-parse HEAD^1
+          echo $?
       - name: Run ansible-lint
         uses: ansible-community/ansible-lint-action@main
