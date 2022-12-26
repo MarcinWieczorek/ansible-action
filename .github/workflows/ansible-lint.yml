@@ -1,4 +1,4 @@
-name: Ansible Lint
+name: Ansible Lint # feel free to pick your own name
 on: [push, pull_request]
 
 jobs:
@@ -6,15 +6,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      # Important: This sets up your GITHUB_WORKSPACE environment variable
+      - uses: actions/checkout@v3
         with:
-          fetch-depth: 2
-      - name: Install dependencies
-        run: |
-          pip install ansible-lint
+          fetch-depth: 0 # needed for progressive mode to work
+
       - name: Run ansible-lint
-        run: |
-          ansible-lint *
-        env:
-          GITHUB_ACTIONS: "true"
-          GITHUB_WORKFLOW: "{{ github.workflow.name }}"
+        # replace `main` with any valid ref, or tags like `v6`
+        uses: ansible/ansible-lint-action@main
+        # optional:
+        # with:
+        #   path: "playbooks/"  # <-- only one value is allowed
